@@ -15,7 +15,6 @@ class UserController extends Controller
 
         $data=array('name'=>$name,"email"=>$email, "skill"=>$skill);
         DB::table('user')->insert($data);
-        echo "Record inserted successfully.<br/>";
-        echo '<a href = "/create">Click Here</a> to go back.';
+        return redirect('view');
     }
 }

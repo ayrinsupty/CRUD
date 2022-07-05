@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UpdateController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
@@ -22,4 +23,6 @@ Route::get('/', function () {
 Route::post('create', [UserController::class, 'insert']);
 Route::view('create', 'create');
 
-Route::get('view', [ViewController::class, 'show']);
+Route::get('view', [ViewController::class, 'index']);
+Route::get('edit/{id}', [UpdateController::class, 'show']);
+Route::post('edit/{id}', [UpdateController::class, 'edit']);
