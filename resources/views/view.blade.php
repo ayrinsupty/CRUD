@@ -26,7 +26,7 @@
                 <td>{{ $user->skill }}</td>
                 <td>
                     <a href='edit/{{ $user->id }}' class="btn btn-info">Update</a>
-                    <a href='delete/{{ $user->id }}' class="btn btn-danger">Delete</a>
+                    <a onclick="return confirm('Are you sure to Delete?');" href='delete/{{ $user->id }}' class="btn btn-danger">Delete</a>
                 </td>
               </tr>
             @endforeach
