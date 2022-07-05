@@ -29,7 +29,7 @@
                     <a href='delete/{{ $user->id }}' class="btn btn-danger">Delete</a>
                 </td>
               </tr>
-              @endforeach
+            @endforeach
             </tbody>
           </table> 
         </div>

@@ -20,7 +20,7 @@
               <label>Skill:</label>
               <input type="text" class="form-control" placeholder="Enter Skill" name="skill"><br>
                   
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-success">Submit</button>
 
           </form>
         </div>

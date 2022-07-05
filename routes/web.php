@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\UpdateController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewController;
@@ -16,13 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Root
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::post('create', [UserController::class, 'insert']);
-Route::view('create', 'create');
-
-Route::get('view', [ViewController::class, 'index']);
-Route::get('edit/{id}', [UpdateController::class, 'show']);
-Route::post('edit/{id}', [UpdateController::class, 'edit']);
+Route::view('/', 'create'); // Display Create Page To Insert Data
+Route::post('create', [UserController::class, 'insert']); // Create Data
+Route::get('view', [ViewController::class, 'index']); // Read Data
+Route::get('edit/{id}', [UpdateController::class, 'show']); // Read Data by ID
+Route::post('edit/{id}', [UpdateController::class, 'edit']); // Update Data
+Route::get('delete/{id}', [DeleteController::class, 'delete']); // Delete Data
